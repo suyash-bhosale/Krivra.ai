@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Krivra AI - Virtual Agronomist | Smart Farming Solutions for Maharashtra Farmers</title>
+    <meta name="title" content="Krivra AI - Virtual Agronomist | Smart Farming Solutions for Maharashtra Farmers">
+    <meta name="description" content="AI-powered agricultural assistant for Maharashtra farmers. Get real-time market prices, crop disease detection, weather forecasts, and expert farming advice in Marathi. Free 24/7 support.">
+    <meta name="keywords" content="krivra ai, virtual agronomist, maharashtra farming, smart agriculture, crop disease detection, mandi prices, weather forecast, farming chatbot, marathi farming assistant, agricultural technology, precision farming, crop advisory, pest control, fertilizer recommendation">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Marathi">
+    <meta name="author" content="Krivra AI">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://krivra.ai/">
+    <meta property="og:title" content="Krivra AI - Virtual Agronomist for Maharashtra Farmers">
+    <meta property="og:description" content="AI-powered agricultural assistant providing real-time market prices, crop disease detection, weather forecasts, and expert farming advice in Marathi.">
+    <meta property="og:image" content="https://krivra.ai/assets/krivra-og-image.jpg">
+    <meta property="og:locale" content="mr_IN">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://krivra.ai/">
+    <meta property="twitter:title" content="Krivra AI - Virtual Agronomist for Maharashtra Farmers">
+    <meta property="twitter:description" content="AI-powered agricultural assistant providing real-time market prices, crop disease detection, weather forecasts, and expert farming advice in Marathi.">
+    <meta property="twitter:image" content="https://krivra.ai/assets/krivra-twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://krivra.ai/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Structured Data - Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Krivra AI",
+      "url": "https://krivra.ai",
+      "logo": "https://krivra.ai/logo.png",
+      "description": "AI-powered virtual agronomist for Maharashtra farmers",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Satara",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8080505563",
+        "contactType": "Customer Service",
+        "availableLanguage": ["Marathi", "Hindi", "English"]
+      },
+      "sameAs": [
+        "https://facebook.com/krivraai",
+        "https://instagram.com/krivraai",
+        "https://twitter.com/krivraai"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Product Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Krivra AI",
+      "applicationCategory": "BusinessApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "operatingSystem": "Web, Android, iOS",
+      "description": "Virtual agronomist chatbot providing real-time agricultural advice, market prices, and crop management solutions for Maharashtra farmers"
+    }
+    </script>
+    
+    <!-- Structured Data - FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Krivra AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Krivra AI is a free virtual agronomist chatbot designed specifically for Maharashtra farmers. It provides real-time market prices, crop disease detection, weather forecasts, fertilizer recommendations, and expert farming advice in Marathi language."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Krivra AI free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Krivra AI is completely free for all farmers. We provide 24/7 support without any subscription or hidden charges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which languages does Krivra AI support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Krivra AI primarily supports Marathi language, along with Hindi and English, making it accessible to farmers across Maharashtra."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #0f0f1e;
+            overflow-x: hidden;
+        }
+
+        /* Enhanced Navigation with Tubelight Effect */
+        nav {
+            background: rgba(20, 20, 40, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
+        /* Tubelight Navigation Links */
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 8px;
+            border-radius: 50px;
+            border: 1px solid rgba(76, 175, 80, 0.15);
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 24px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .nav-links a:hover {
+            color: #4caf50;
+        }
+
+        .nav-links a.active {
+            color: #4caf50;
+        }
+
+        /* Tubelight Background Animation */
+        .nav-indicator {
+            position: absolute;
+            background: rgba(76, 175, 80, 0.15);
+            border-radius: 50px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .nav-indicator::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50px;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(129, 199, 132, 0.1));
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(76, 175, 80, 0.5), 0 0 30px rgba(76, 175, 80, 0.3);
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #81c784;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0f3620 0%, #1a5a2f 50%, #0d2818 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(76, 175, 80, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(76, 175, 80, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #fff, #81c784, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #4caf50, #66bb6a);
+            color: white;
+            box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(76, 175, 80, 0.5);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: #81c784;
+            border: 2px solid #4caf50;
+        }
+
+        .cta-secondary:hover {
+            background: rgba(76, 175, 80, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Trust Indicators */
+        .trust-indicators {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-number {
+            font-size: 32px;
+            font-weight: 900;
+            color: #4caf50;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .trust-label {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #1a1a2e;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            border-radius: 2px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(76, 175, 80, 0.15);
+            border-radius: 12px;
+            padding: 40px 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(76, 175, 80, 0.4);
+            background: rgba(76, 175, 80, 0.05);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: #81c784;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 20px;
+            background: #0f0f1e;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            color: #81c784;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-text p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .about-list li {
+            padding: 12px 0;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+        }
+
+        .about-list li::before {
+            content: '✓';
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .about-visual {
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(129, 199, 132, 0.05));
+            border: 1px solid rgba(76, 175, 80, 0.2);
+            border-radius: 16px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 120px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 20px;
+            background: #1a1a2e;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 0;
+            margin-top: 50px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-card {
+            padding: 40px 32px;
+            position: relative;
+            overflow: hidden;
+            border-right: 1px solid rgba(76, 175, 80, 0.15);
+            border-bottom: 1px solid rgba(76, 175, 80, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:nth-child(1),
+        .service-card:nth-child(5) {
+            border-left: 1px solid rgba(76, 175, 80, 0.15);
+        }
+
+        .service-card:nth-child(1),
+        .service-card:nth-child(2),
+        .service-card:nth-child(3),
+        .service-card:nth-child(4) {
+            border-top: 1px solid rgba(76, 175, 80, 0.15);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(76, 175, 80, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .service-card:nth-child(n+5)::before {
+            background: linear-gradient(to bottom, rgba(76, 175, 80, 0.1), transparent);
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background: rgba(76, 175, 80, 0.3);
+            border-radius: 0 4px 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover::after {
+            height: 32px;
+            background: #4caf50;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+            color: rgba(129, 199, 132, 0.6);
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            color: #4caf50;
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 12px;
+            font-weight: 700;
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover h3 {
+            transform: translateX(8px);
+            color: #81c784;
+        }
+
+        .service-card p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
+            line-height: 1.6;
+            position: relative;
+            z-index: 10;
+            max-width: 320px;
+            transition: color 0.3s ease;
+        }
+
+        .service-card:hover p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #0f3620 0%, #1a5a2f 50%, #0d2818 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-content h2 {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+
+        .cta-content p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a14;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 60px 20px 30px;
+            border-top: 1px solid rgba(76, 175, 80, 0.1);
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #81c784;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-section p,
+        .footer-section a,
+        .footer-section li {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.8;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: #81c784;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #4caf50, #81c784);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(76, 175, 80, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: #4caf50;
+            border-color: #4caf50;
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 60px);
+                background: rgba(20, 20, 40, 0.98);
+                flex-direction: column;
+                gap: 0;
+                padding: 20px;
+                transition: left 0.3s;
+                z-index: 999;
+                border-radius: 0;
+                border: none;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                padding: 16px;
+                border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+                font-size: 16px;
+                border-radius: 8px;
+            }
+
+            .nav-indicator {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 80px 20px 60px;
+                min-height: auto;
+            }
+
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-visual {
+                height: 300px;
+                font-size: 100px;
+            }
+
+            .about-list {
+                grid-template-columns: 1fr;
+            }
+
+            .about-text h3 {
+                font-size: 24px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .service-card {
+                border-left: 1px solid rgba(76, 175, 80, 0.15) !important;
+                border-right: 1px solid rgba(76, 175, 80, 0.15) !important;
+                padding: 32px 24px;
+            }
+
+            .service-card:first-child {
+                border-top: 1px solid rgba(76, 175, 80, 0.15);
+            }
+
+            .service-card::before {
+                background: linear-gradient(to top, rgba(76, 175, 80, 0.1), transparent) !important;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+
+            .trust-indicators {
+                gap: 30px;
+            }
+
+            .trust-number {
+                font-size: 28px;
+            }
+
+            .cta-content h2 {
+                font-size: 32px;
+            }
+
+            .cta-content p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>🌾</span>
+                <span>Krivra</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <div class="nav-indicator" id="navIndicator"></div>
+                <li><a href="#home" class="nav-link active" onclick="setActive(event)">🏠 मुख्यपृष्ठ</a></li>
+                <li><a href="#features" class="nav-link" onclick="setActive(event)">⭐ वैशिष्ट्ये</a></li>
+                <li><a href="#about" class="nav-link" onclick="setActive(event)">ℹ️ आमच्याबद्दल</a></li>
+                <li><a href="#services" class="nav-link" onclick="setActive(event)">⚙️ सेवा</a></li>
+                <li><a href="chat_box.html" class="nav-link" onclick="setActive(event)">💬 चॅट</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>भविष्यातील कृषि, आजच</h1>
+            <p class="hero-subtitle">Krivra AI - तुमचा स्मार्ट कृषी साथी</p>
+            <p class="hero-description">आर्टिफिशियल इंटेलिजन्स आणि कृषी विज्ञानाचा संमिश्रण. रीअल-टाइम बाजार भाव, कीटनियंत्रण, हवामान पूर्वानुमान, खत मार्गदर्शन आणि बरेच काही - सब एका स्थानावर. महाराष्ट्रातील शेतकऱ्यांसाठी विशेष डिझाइन केलेली AI चॅटबॉट.</p>
+            <div class="cta-buttons">
+                <a href="chat_box.html" class="cta-button cta-primary">आजच सुरुवात करा</a>
+                <a href="#features" class="cta-button cta-secondary">अधिक जाणून घ्या</a>
+            </div>
+            
+            <!-- Trust Indicators -->
+            <div class="trust-indicators">
+                <div class="trust-item">
+                    <span class="trust-number">10,000+</span>
+                    <span class="trust-label">शेतकरी</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">500+</span>
+                    <span class="trust-label">पिके</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">24/7</span>
+                    <span class="trust-label">सहाय्य</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">100%</span>
+                    <span class="trust-label">विनामूल्य</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <h2 class="section-title">का निवडावे Krivra AI?</h2>
+            <p class="section-subtitle">आधुनिक तंत्रज्ञान आणि पारंपरिक शेती ज्ञानाचे परिपूर्ण मिश्रण - तुमच्या शेतीच्या यशासाठी</p>
+            
+            <div class="features-grid">
+                <article class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <h3>AI-संचालित सल्ला</h3>
+                    <p>अत्याधुनिक आर्टिफिशियल इंटेलिजन्स तंत्रज्ञान वापरून तुमच्या प्रत्येक प्रश्नाचे तात्काळ आणि अचूक उत्तर मिळवा. मराठी भाषेत सहज संवाद साधा.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>कुठेही, कधीही</h3>
+                    <p>मोबाईल, टॅबलेट किंवा कॉम्प्युटरवर - कुठूनही आणि कधीही तुमच्या व्हर्च्युअल कृषी सल्लागाराशी संपर्क साधा. इंटरनेट कनेक्शन हवं.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>तुमच्यासाठी खास</h3>
+                    <p>तुमच्या जिल्ह्याप्रमाणे, पिकाप्रमाणे आणि हंगामाप्रमाणे विशिष्ट सल्ला. महाराष्ट्रातील सर्व जिल्ह्यांसाठी स्थानिक माहिती.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">💰</span>
+                    <h3>संपूर्ण विनामूल्य</h3>
+                    <p>कोणतेही छुपे शुल्क नाही, कोणतीही सदस्यता नाही. प्रत्येक शेतकऱ्याला उच्च दर्जाचे कृषी सल्लामशवरा मिळावा हे आमचे ध्येय आहे.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">🔬</span>
+                    <h3>वैज्ञानिक पद्धत</h3>
+                    <p>कृषी विज्ञान संशोधन आणि तज्ञांच्या मार्गदर्शनावर आधारित सल्ला. प्रत्येक शिफारस वैज्ञानिकदृष्ट्या सत्यापित.</p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">🌍</span>
+                    <h3>सतत अद्यतनित</h3>
+                    <p>नवीनतम कृषी तंत्रज्ञान, बाजार माहिती आणि हवामान अंदाज - सर्व काही रीअल-टाइम अपडेट. नेहमी ताज्या माहितीवर विश्वास ठेवा.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">Krivra AI विषयी</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>तुमचा डिजिटल कृषी सल्लागार</h3>
+                    <p>Krivra AI ही एक क्रांतिकारक कृषी सल्ला प्रणाली आहे जी महाराष्ट्रातील शेतकऱ्यांना वास्तविक समयात व्यावसायिक मार्गदर्शन प्रदान करते. आमचं ध्येय आहे प्रत्येक शेतकऱ्याला उच्च तंत्रज्ञानाचा लाभ पोहोचवणे.</p>
+                    
+                    <p>आधुनिक तंत्रज्ञान, कृषी विज्ञान आणि पारंपरिक ज्ञान एकत्रित करून आम्ही शेतकऱ्यांना उच्च उत्पादकता आणि लाभजनकता साध्यण्यास मदत करतो. कांदा, टमाटर, सोयाबीन, कापूस - कोणत्याही पिकासाठी तज्ञ सल्ला.</p>
+                    
+                    <ul class="about-list">
+                        <li>24/7 उपलब्ध सेवा</li>
+                        <li>मराठीतून तात्काळ उत्तरे</li>
+                        <li>वैज्ञानिक आधारित सल्ले</li>
+                        <li>विनामूल्य आणि सर्वांसाठी</li>
+                        <li>सर्व जिल्ह्यांसाठी</li>
+                        <li>500+ पिकांचा डेटा</li>
+                        <li>APMC मंडी भाव</li>
+                        <li>हवामान अंदाज</li>
+                    </ul>
+                </div>
+                <div class="about-visual">🚀</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <h2 class="section-title">आमच्या सेवा</h2>
+            <p class="section-subtitle">संपूर्ण कृषी समाधान - लागवडीपासून विक्रीपर्यंत</p>
+            
+            <div class="services-grid">
+                <article class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3>रीअल-टाइम मंडी भाव</h3>
+                    <p>APMC मंडीतून आजचे कांदा, टमाटर, सोयाबीन आणि 100+ पिकांचे तात्काळ भाव. सर्वोत्तम दरात विक्रय करा आणि जास्तीत जास्त नफा मिळवा.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon">🐛</span>
+                    <h3>किडे व रोग सल्ला</h3>
+                    <p>पिकांवरील किडे, बुरशी व रोगांची तात्काळ ओळख करा. नियंत्रण उपाय, औषधे आणि सुरक्षा मार्गदर्शन. जैविक आणि रासायनिक दोन्ही पर्याय.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon">⛅</span>
+                    <h3>5 दिवसांचा हवामान</h3>
+                    <p>तापमान, पाऊस, वारा, आर्द्रता - पुढचे 5 दिवसांचा तपशीलवार अंदाज. लागवड व कापणीची योजना करा. पाणी व्यवस्थापन सुधारा.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon">🌾</span>
+                    <h3>स्मार्ट खत मार्गदर्शन</h3>
+                    <p>तुमच्या पिकासाठी योग्य खत, योग्य प्रमाण, योग्य वेळी. NPK आणि जैव खते यांचे सूचन. मातीची सुपीकता वाढवा आणि खर्च कमी करा.</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon">💧</span>
+                    <h3>माती व सिंचन विश्लेषण</h3>
+                    <p>तुमच्या शेताची माती तपासून गुणवत्ता जाणून घ्या. योग्य सिंचन पद्धत शिका. ठिबक सिंचन, फवारणी - कोणती पद्धत तुमच्यासाठी योग्य?</p>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-icon">🎥</span>
+                    <h3>व्हिडिओ शिक्षण</h3>
+                    <p>कसे करावे - लागवड, फवारणी, कापणी, साठवण. व्हिडिओमध्ये सरावळीत मार्गदर्शन. अनुभवी शेतकऱ्यांचे टिप्स आणि ट्रिक्स.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>आजच तुमच्या शेतीला स्मार्ट बनवा</h2>
+            <p>लाखो शेतकरी Krivra AI वर विश्वास ठेवतात. तुम्हीही आजच सामील व्हा आणि आधुनिक शेतीचा अनुभव घ्या. कोणतेही शुल्क नाही, फक्त एक क्लिक!</p>
+            <div class="cta-buttons">
+                <a href="chat_box.html" class="cta-button cta-primary">आता चॅट सुरू करा</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section-container">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <div class="footer-logo">🌾 Krivra</div>
+                    <p>Krivra AI हा एक आधुनिक कृषी सल्ला प्रणाली आहे जी शेतकऱ्यांना व्यावहारिक आणि वैज्ञानिक मार्गदर्शन देते. महाराष्ट्रातील प्रत्येक शेतकऱ्यासाठी.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>आमच्याशी संपर्क साधा</h4>
+                    <ul>
+                        <li><strong>📍 पत्ता:</strong> सातारा, महाराष्ट्र</li>
+                        <li style="margin-top: 10px;"><strong>📧 ईमेल:</strong></li>
+                        <li><a href="mailto:bhosalesuyash8@gmail.com">bhosalesuyash8@gmail.com</a></li>
+                        <li style="margin-top: 10px;"><strong>📞 फोन:</strong></li>
+                        <li><a href="tel:+918080505563">+91 80805 05563</a></li>
+                        <li style="margin-top: 10px;"><strong>💬 व्हाट्सअ‍ॅप:</strong></li>
+                        <li><a href="https://wa.me/918080505563" target="_blank" rel="noopener">आमच्याशी बोला</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>महत्वाचे लिंक्स</h4>
+                    <ul>
+                        <li><a href="#home">मुख्यपृष्ठ</a></li>
+                        <li><a href="#features">वैशिष्ट्ये</a></li>
+                        <li><a href="#about">आमच्याबद्दल</a></li>
+                        <li><a href="#services">सेवा</a></li>
+                        <li><a href="chat_box.html">चॅटबॉट</a></li>
+                        <li><a href="#">गोपनीयता धोरण</a></li>
+                        <li><a href="#">अटी व शर्ती</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>सोशल मीडिया</h4>
+                    <p style="margin-bottom: 14px;">आमचे अनुसरण करा आणि नवीनतम अपडेट्स मिळवा</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+                        <a href="https://instagram.com" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+                        <a href="https://twitter.com" title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">𝕏</a>
+                        <a href="https://youtube.com" title="YouTube" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Krivra AI. सर्वाधिकार राखीत. | Made with ❤️ for Maharashtra Farmers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function setActive(event) {
+            event.preventDefault();
+            const clickedLink = event.currentTarget;
+            const navLinks = document.querySelectorAll('.nav-link');
+            const indicator = document.getElementById('navIndicator');
+            
+            navLinks.forEach(link => link.classList.remove('active'));
+            clickedLink.classList.add('active');
+            updateIndicator(clickedLink);
+            
+            const targetId = clickedLink.getAttribute('href');
+            if (targetId.startsWith('#')) {
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                window.location.href = targetId;
+            }
+            
+            if (window.innerWidth <= 768) {
+                toggleMenu();
+            }
+        }
+
+        function updateIndicator(activeLink) {
+            const indicator = document.getElementById('navIndicator');
+            const linkRect = activeLink.getBoundingClientRect();
+            const navRect = activeLink.parentElement.parentElement.getBoundingClientRect();
+            
+            indicator.style.width = linkRect.width + 'px';
+            indicator.style.height = linkRect.height + 'px';
+            indicator.style.left = (linkRect.left - navRect.left) + 'px';
+            indicator.style.top = (linkRect.top - navRect.top) + 'px';
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const activeLink = document.querySelector('.nav-link.active');
+            if (activeLink && window.innerWidth > 768) {
+                updateIndicator(activeLink);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            const activeLink = document.querySelector('.nav-link.active');
+            if (activeLink && window.innerWidth > 768) {
+                updateIndicator(activeLink);
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                    if (window.innerWidth > 768) {
+                        updateIndicator(link);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
