@@ -18,6 +18,7 @@
             --glass-bg: rgba(255, 255, 255, 0.7);
             --user-msg-bg: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
             --bot-msg-bg: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            --accent: #2196f3;
         }
 
         [data-theme="dark"] {
@@ -33,6 +34,7 @@
             --glass-bg: rgba(45, 45, 45, 0.7);
             --user-msg-bg: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
             --bot-msg-bg: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+            --accent: #42a5f5;
         }
 
         * {
@@ -77,6 +79,7 @@
             }
         }
 
+        /* Aurora Background */
         .aurora-background {
             position: absolute;
             inset: 0;
@@ -100,6 +103,7 @@
             50% { background-position: 100% 50%; }
         }
 
+        /* Header */
         .header {
             flex-shrink: 0;
             padding: 12px 16px;
@@ -125,8 +129,9 @@
         }
 
         .logo {
-            font-size: 24px;
+            font-size: 28px;
             animation: seedGrow 3s ease-in-out infinite;
+            filter: drop-shadow(0 2px 8px rgba(76, 175, 80, 0.4));
         }
 
         @keyframes seedGrow {
@@ -134,11 +139,24 @@
             50% { transform: scale(1.1) rotate(5deg); }
         }
 
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+        }
+
         .brand-name {
             font-size: 18px;
             font-weight: 700;
             color: var(--text-primary);
             letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
+        .brand-version {
+            font-size: 10px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-top: 2px;
         }
 
         .online-status {
@@ -192,6 +210,7 @@
             transform: scale(0.95);
         }
 
+        /* Search Bar */
         .search-container {
             padding: 10px 16px;
             background: var(--glass-bg);
@@ -226,6 +245,7 @@
             color: var(--text-primary);
         }
 
+        /* Chat Area */
         .chat-container {
             flex: 1;
             display: flex;
@@ -258,6 +278,7 @@
             border-radius: 3px;
         }
 
+        /* Welcome Section */
         .welcome-section {
             flex: 1;
             display: flex;
@@ -286,7 +307,7 @@
         }
 
         .welcome-icon {
-            font-size: 60px;
+            font-size: 64px;
             animation: float 3s ease-in-out infinite;
             filter: drop-shadow(0 5px 15px rgba(76, 175, 80, 0.3));
         }
@@ -297,7 +318,7 @@
         }
 
         .welcome-title {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 8px;
@@ -332,6 +353,7 @@
             margin-top: 4px;
         }
 
+        /* Quick Suggestions */
         .quick-suggestions {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -387,6 +409,7 @@
             transform: scale(0.97);
         }
 
+        /* Message Group */
         .message-group {
             display: flex;
             flex-direction: column;
@@ -402,6 +425,7 @@
             align-items: flex-start;
         }
 
+        /* Messages */
         .message {
             display: flex;
             align-items: flex-end;
@@ -512,6 +536,50 @@
             font-size: 10px;
         }
 
+        /* Action Buttons */
+        .message-actions {
+            display: flex;
+            gap: 6px;
+            margin-top: 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .message:hover .message-actions {
+            opacity: 1;
+        }
+
+        .action-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .action-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        .action-btn.copy-btn:hover {
+            background: var(--accent);
+        }
+
+        .action-btn.share-btn:hover {
+            background: #ff9800;
+        }
+
+        /* Quick Replies */
         .quick-replies {
             display: flex;
             flex-wrap: wrap;
@@ -544,42 +612,7 @@
             box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
         }
 
-        .message-reactions {
-            display: flex;
-            gap: 6px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .message:hover .message-reactions {
-            opacity: 1;
-        }
-
-        .reaction-btn {
-            background: var(--glass-bg);
-            border: 1px solid var(--border-color);
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 14px;
-            transition: all 0.2s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .reaction-btn:hover {
-            transform: scale(1.2);
-            box-shadow: 0 2px 8px var(--shadow);
-        }
-
-        .reaction-btn.active {
-            background: var(--primary);
-            border-color: var(--primary);
-        }
-
+        /* Typing Indicator */
         .typing-indicator {
             display: flex;
             align-items: center;
@@ -624,6 +657,7 @@
             color: var(--text-secondary);
         }
 
+        /* Bottom Container */
         .bottom-container {
             flex-shrink: 0;
             position: relative;
@@ -633,6 +667,7 @@
             border-top: 1px solid var(--border-color);
         }
 
+        /* Input Section */
         .input-section {
             padding: 10px 14px;
         }
@@ -641,6 +676,46 @@
             display: flex;
             gap: 8px;
             align-items: flex-end;
+        }
+
+        .voice-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            flex-shrink: 0;
+        }
+
+        .voice-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.08);
+            border-color: var(--primary);
+        }
+
+        .voice-btn:active {
+            transform: scale(0.93);
+        }
+
+        .voice-btn.recording {
+            background: #f44336;
+            color: white;
+            border-color: #f44336;
+            animation: recordPulse 1s infinite;
+        }
+
+        @keyframes recordPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(244, 67, 54, 0); }
         }
 
         input {
@@ -696,6 +771,7 @@
             cursor: not-allowed;
         }
 
+        /* Footer */
         .footer {
             padding: 8px 14px;
             text-align: center;
@@ -729,6 +805,7 @@
             border-color: var(--primary);
         }
 
+        /* Modal */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -883,6 +960,7 @@
             left: 26px;
         }
 
+        /* Toast */
         .toast {
             position: fixed;
             bottom: 100px;
@@ -906,6 +984,7 @@
             opacity: 1;
         }
 
+        /* Achievement Badge */
         .achievement-popup {
             position: fixed;
             top: 80px;
@@ -939,38 +1018,12 @@
             50% { transform: translateY(-10px); }
         }
 
-        .pull-to-refresh {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-secondary);
-            transform: translateY(-60px);
-            transition: transform 0.3s ease;
-        }
-
-        .pull-to-refresh.pulling {
-            transform: translateY(0);
-        }
-
-        .refresh-icon {
-            font-size: 24px;
-            animation: rotate 1s linear infinite;
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
+        /* Font Size Classes */
         .font-small { font-size: 13px; }
         .font-medium { font-size: 15px; }
         .font-large { font-size: 17px; }
 
+        /* Responsive */
         @media (min-width: 600px) and (max-width: 1023px) {
             .welcome-icon { font-size: 64px; }
             .welcome-title { font-size: 26px; }
@@ -999,26 +1052,34 @@
         <div class="header" id="header">
             <div class="header-content">
                 <span class="logo">🌱</span>
-                <h1 class="brand-name">Krivra AI</h1>
+                <div class="brand-info">
+                    <h1 class="brand-name">Krivra AI</h1>
+                    <span class="brand-version">v3.1 Premium</span>
+                </div>
                 <span class="online-status" id="onlineStatus"></span>
             </div>
             <div class="header-actions">
+                <button class="icon-button" onclick="toggleSearch()" title="Search">🔍</button>
                 <button class="icon-button" onclick="openSettings()" title="Settings">⚙️</button>
                 <button class="icon-button" onclick="shareConversation()" title="Share">🔗</button>
             </div>
         </div>
 
-        <div class="chat-container">
-            <div class="pull-to-refresh" id="pullToRefresh">
-                <span class="refresh-icon">↻</span>
+        <div class="search-container" id="searchContainer">
+            <div class="search-wrapper">
+                <span>🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="संभाषण शोधा..." oninput="searchMessages()">
+                <button class="icon-button" onclick="toggleSearch()" style="width: 28px; height: 28px; font-size: 14px;">✕</button>
             </div>
+        </div>
 
+        <div class="chat-container">
             <div class="chat-section" id="chatSection">
                 <div class="welcome-section" id="welcomeSection">
                     <div class="welcome-icon">👋</div>
                     <div>
                         <div class="welcome-title">नमस्कार!</div>
-                        <p class="welcome-text">मी तुमचा AI कृषी सल्लागार आहे. तुमच्या शेतीविषयी ही प्रश्न विचारा.</p>
+                        <p class="welcome-text">मी तुमचा AI कृषी सल्लागार आहे. तुमच्या शेतीविषयी कोणतही प्रश्न विचारा.</p>
                     </div>
                     <div class="stats-container">
                         <div class="stat-item">
@@ -1033,9 +1094,9 @@
                 </div>
 
                 <div class="quick-suggestions" id="suggestions">
-                    <div class="suggestion" onclick="askQuestion('हवामान अंदाज')">🌾 हवामान अंदाज</div>
+                    <div class="suggestion" onclick="askQuestion('पिकांचे रोग')">🌾 पिकांचे रोग</div>
                     <div class="suggestion" onclick="askQuestion('खत व पोषण')">🌿 खत व पोषण</div>
-                    <div class="suggestion" onclick="askQuestion('बाजारभाव')">💧 बाजारभाव</div>
+                    <div class="suggestion" onclick="askQuestion('पाणी व सिंचन')">💧 पाणी व सिंचन</div>
                     <div class="suggestion" onclick="askQuestion('बियाणे व रोपण')">🌱 बियाणे व रोपण</div>
                 </div>
             </div>
@@ -1043,13 +1104,14 @@
             <div class="bottom-container">
                 <div class="input-section">
                     <div class="input-wrapper">
+                        <button class="voice-btn" id="voiceBtn" onclick="toggleVoiceInput()" title="Voice Input">🎤</button>
                         <input type="text" id="userInput" placeholder="तुमचा प्रश्न विचारा..." onkeypress="handleKeyPress(event)">
                         <button class="send-button" id="sendBtn" onclick="sendMessage()">➤</button>
                     </div>
                 </div>
 
                 <div class="footer">
-                    <span>© Krivra AI 2025 • v3.0</span>
+                    <span>© Krivra AI 2025 • v3.1</span>
                     <div class="font-controls">
                         <button class="font-btn" onclick="changeFontSize('small')">A-</button>
                         <button class="font-btn" onclick="changeFontSize('medium')">A</button>
@@ -1156,12 +1218,13 @@
     <div class="achievement-popup" id="achievementPopup">
         <span class="achievement-icon">🏆</span>
         <div>
-            <div style="font-weight: 700; margin-bottom: 2px;">अभिनंदन!</div>
+            <div style="font-weight: 700; margin-bottom: 2px;">बधाई!</div>
             <div style="font-size: 12px;" id="achievementText"></div>
         </div>
     </div>
 
     <script>
+        // Global Variables
         const chatSection = document.getElementById('chatSection');
         const userInput = document.getElementById('userInput');
         const sendBtn = document.getElementById('sendBtn');
@@ -1180,19 +1243,48 @@
         let currentFontSize = 'medium';
         let soundEnabled = true;
         let hapticEnabled = true;
+        let isRecording = false;
+        let recognition = null;
         let questionCount = 0;
-        let touchStartY = 0;
-        let isPulling = false;
 
+        // Initialize
         window.addEventListener('DOMContentLoaded', () => {
+            initializeApp();
             checkOnlineStatus();
             loadSettings();
-            setupPullToRefresh();
             
             const urlParams = new URLSearchParams(window.location.search);
             const sharedData = urlParams.get('chat');
             if (sharedData) loadSharedConversation(sharedData);
         });
+
+        function initializeApp() {
+            // Initialize Speech Recognition
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.lang = 'mr-IN';
+                recognition.continuous = false;
+                recognition.interimResults = false;
+
+                recognition.onresult = (event) => {
+                    const transcript = event.results[0][0].transcript;
+                    userInput.value = transcript;
+                    playSound('success');
+                };
+
+                recognition.onerror = () => {
+                    showToast('आवाज ओळखण्यात समस्या');
+                    isRecording = false;
+                    document.getElementById('voiceBtn').classList.remove('recording');
+                };
+
+                recognition.onend = () => {
+                    isRecording = false;
+                    document.getElementById('voiceBtn').classList.remove('recording');
+                };
+            }
+        }
 
         function checkOnlineStatus() {
             const updateStatus = () => {
@@ -1230,42 +1322,27 @@
             }
         }
 
-        function setupPullToRefresh() {
-            chatSection.addEventListener('touchstart', (e) => {
-                if (chatSection.scrollTop === 0) {
-                    touchStartY = e.touches[0].clientY;
-                }
-            });
+        // Voice Input
+        function toggleVoiceInput() {
+            if (!recognition) {
+                showToast('आवाज इनपुट समर्थित नाही');
+                return;
+            }
 
-            chatSection.addEventListener('touchmove', (e) => {
-                if (chatSection.scrollTop === 0) {
-                    const touchY = e.touches[0].clientY;
-                    const pullDistance = touchY - touchStartY;
-                    
-                    if (pullDistance > 60 && !isPulling) {
-                        isPulling = true;
-                        document.getElementById('pullToRefresh').classList.add('pulling');
-                        triggerHaptic();
-                    }
-                }
-            });
-
-            chatSection.addEventListener('touchend', () => {
-                if (isPulling) {
-                    refreshConversation();
-                    setTimeout(() => {
-                        document.getElementById('pullToRefresh').classList.remove('pulling');
-                        isPulling = false;
-                    }, 1000);
-                }
-            });
+            if (isRecording) {
+                recognition.stop();
+                isRecording = false;
+                document.getElementById('voiceBtn').classList.remove('recording');
+            } else {
+                recognition.start();
+                isRecording = true;
+                document.getElementById('voiceBtn').classList.add('recording');
+                showToast('बोलत आहात...');
+                triggerHaptic();
+            }
         }
 
-        function refreshConversation() {
-            showToast('रिफ्रेश केले!');
-            playSound('success');
-        }
-
+        // Message Functions
         function addMessage(text, isUser = false, addToConversation = true, showQuickReplies = false) {
             if (isUser && !welcomeSection.classList.contains('hidden')) {
                 welcomeSection.classList.add('hidden');
@@ -1305,22 +1382,26 @@
             messageContent.appendChild(bubble);
             messageContent.appendChild(time);
 
+            // Action Buttons for Bot Messages
             if (!isUser) {
-                const reactions = document.createElement('div');
-                reactions.className = 'message-reactions';
-                reactions.innerHTML = `
-                    <button class="reaction-btn" onclick="reactToMessage(this, '👍')">👍</button>
-                    <button class="reaction-btn" onclick="reactToMessage(this, '👎')">👎</button>
-                    <button class="reaction-btn" onclick="copyMessage('${text.replace(/'/g, "\\'")}')">📋</button>
-                    <button class="reaction-btn" onclick="shareMessage('${text.replace(/'/g, "\\'")}')">🔗</button>
+                const actions = document.createElement('div');
+                actions.className = 'message-actions';
+                actions.innerHTML = `
+                    <button class="action-btn copy-btn" onclick="copyMessage('${text.replace(/'/g, "\\'")}')">
+                        📋 कॉपी
+                    </button>
+                    <button class="action-btn share-btn" onclick="shareMessage('${text.replace(/'/g, "\\'")}')">
+                        📤 शेअर
+                    </button>
                 `;
-                messageContent.appendChild(reactions);
+                messageContent.appendChild(actions);
             }
 
             message.appendChild(avatar);
             message.appendChild(messageContent);
             messageGroup.appendChild(message);
 
+            // Quick Replies
             if (showQuickReplies && !isUser) {
                 const quickReplies = document.createElement('div');
                 quickReplies.className = 'quick-replies';
@@ -1358,7 +1439,7 @@
                     <div class="typing-dot"></div>
                     <div class="typing-dot"></div>
                 </div>
-                <span class="typing-text">थांबा जरा, Krivra तुमचं उत्तर शोधत आहे...</span>
+                <span class="typing-text">विचार करत आहे...</span>
             `;
 
             message.appendChild(avatar);
@@ -1423,6 +1504,7 @@
                 const retryMessage = document.createElement('div');
                 retryMessage.className = 'message bot';
                 retryMessage.innerHTML = `
+                    <div class="avatar bot">🤖</div>
                     <div class="message-bubble">
                         कनेक्शन समस्या. 
                         <button onclick="sendMessage()" style="margin-left: 8px; padding: 4px 12px; background: var(--primary); color: white; border: none; border-radius: 12px; cursor: pointer;">
@@ -1450,6 +1532,7 @@
             }
         }
 
+        // Search
         function toggleSearch() {
             const searchContainer = document.getElementById('searchContainer');
             searchContainer.classList.toggle('active');
@@ -1475,12 +1558,7 @@
             });
         }
 
-        function reactToMessage(btn, reaction) {
-            btn.classList.toggle('active');
-            triggerHaptic();
-            playSound('click');
-        }
-
+        // Settings
         function openSettings() {
             settingsModal.classList.add('active');
             playSound('click');
@@ -1550,7 +1628,7 @@
                 const time = new Date(msg.timestamp).toLocaleString('mr-IN');
                 content += `[${time}] ${msg.isUser ? '👤 शेतकरी' : '🤖 Krivra AI'}:\n${msg.text}\n\n`;
             });
-            content += '\n© Krivra AI 2025';
+            content += '\n© Krivra AI 2025 v3.1';
 
             const blob = new Blob([content], { type: 'text/plain' });
             const url = URL.createObjectURL(blob);
@@ -1572,6 +1650,8 @@
                 chatSection.innerHTML = '';
                 welcomeSection.classList.remove('hidden');
                 suggestions.classList.remove('hidden');
+                chatSection.appendChild(welcomeSection);
+                chatSection.appendChild(suggestions);
                 questionCount = 0;
                 document.getElementById('questionsCount').textContent = '0';
                 showToast('सर्व डेटा साफ केला!');
@@ -1581,6 +1661,7 @@
             }
         }
 
+        // Share Functions
         function shareConversation() {
             if (conversation.length === 0) {
                 showToast('संभाषण रिकामे आहे!');
@@ -1598,6 +1679,7 @@
             copyToClipboard(text);
             showToast('मेसेज कॉपी झाला!');
             triggerHaptic();
+            playSound('success');
         }
 
         function shareMessage(text) {
@@ -1609,6 +1691,7 @@
                     text: shareText
                 }).then(() => {
                     playSound('success');
+                    showToast('शेअर केले!');
                 }).catch(() => {
                     copyToClipboard(shareText);
                     showToast('टेक्स्ट कॉपी झाला!');
@@ -1630,26 +1713,7 @@
             conversation.forEach((msg) => {
                 text += `${msg.isUser ? '👤 शेतकरी' : '🤖 Krivra AI'}: ${msg.text}\n\n`;
             });
-            text += '━━━━━━━━━━━━━━━\n© Krivra AI 2025';
-
-            copyToClipboard(text);
-            showToast('संभाषण कॉपी झाला!');
-            playSound('success');
-            triggerHaptic();
-            closeShareModal();
-        }
-
-        function shareViaWhatsApp() {
-            if (conversation.length === 0) {
-                showToast('संभाषण रिकामे आहे!');
-                return;
-            }
-
-            let text = '🌱 *Krivra AI संभाषण*\n\n';
-            conversation.forEach((msg) => {
-                text += `${msg.isUser ? '👤 *शेतकरी*' : '🤖 *Krivra AI*'}: ${msg.text}\n\n`;
-            });
-            text += '━━━━━━━━━━━━━━━\n© Krivra AI 2025';
+            text += '─────────────────\n© Krivra AI 2025 v3.1';
 
             const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
             window.open(whatsappUrl, '_blank');
@@ -1699,6 +1763,7 @@
             }
         }
 
+        // Utility Functions
         function copyToClipboard(text) {
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(text).catch(() => {
@@ -1792,6 +1857,7 @@
             }
         }
 
+        // Event Listeners
         shareModal.addEventListener('click', (e) => {
             if (e.target === shareModal) closeShareModal();
         });
@@ -1800,6 +1866,7 @@
             if (e.target === settingsModal) closeSettings();
         });
 
+        // Hide header on scroll (mobile only)
         if (window.innerWidth < 1024) {
             chatSection.addEventListener('scroll', () => {
                 const scrollTop = chatSection.scrollTop;
@@ -1813,6 +1880,7 @@
             });
         }
 
+        // Handle mobile keyboard
         if (window.visualViewport) {
             window.visualViewport.addEventListener('resize', () => {
                 setTimeout(() => {
@@ -1821,15 +1889,13 @@
             });
         }
 
+        // Daily Tips
         const farmingTips = [
             '🌾 टीप: पिकांना नियमित पाणी द्या.',
             '🌿 टीप: सेंद्रिय खत वापरा.',
             '💧 टीप: पाण्याचा योग्य वापर करा.',
             '🌱 टीप: मातीची नियमित तपासणी करा.',
-            '🦋 टीप: नैसर्गिक कीटकनाशक वापरा.',
-            '☀️ टीप: पिकांना पुरेशी सूर्यप्रकाश मिळवा.',
-            '🌻 टीप: पिकांची योग्य अंतरावर लागवड करा.',
-            '🍂 टीप: झाडांच्या आजूबाजूला गवत ठेवा.',
+            '🦋 टीप: नैसर्गिक कीटकनाशक वापरा.'
         ];
 
         let tipIndex = 0;
@@ -1840,16 +1906,17 @@
             }
         }, 30000);
 
+        // Auto-focus input
         userInput.focus();
 
+        // Service Worker for offline support
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js').catch(() => {
                 console.log('Service Worker registration failed');
             });
         }
 
-        console.log('🌱 Krivra AI Premium v3.0 Initialized');
+        console.log('🌱 Krivra AI Premium v3.1 Initialized');
     </script>
 </body>
-
-</html>
+<
